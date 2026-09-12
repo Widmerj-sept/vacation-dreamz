@@ -30,5 +30,9 @@ window.vacationGallery = [
     image: "palm-tree.jpg",
     title: "Beach Inspiration",
     caption: "Sometimes the best trip starts with a view that makes you say, “I want to go there.”"
-  }
+  },{
+  image: "riu-las-americas.jpg",
+  title: "Riu Palace Las Americas — Cancun",
+  caption: "Fun, sunshine and gorgeous Caribbean views in Cancun! Another Vacation Dreamz favorite."
+}
 ];
