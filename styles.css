@@ -234,3 +234,427 @@ legend { margin-bottom:12px; }
   .gallery-grid figure, .gallery-wide, .gallery-tall { grid-column:auto; grid-row:auto; height:280px; }
   .gallery-grid .gallery-tall { height:430px; }
 }
+
+
+/* --- Fix: keep both hero buttons above the white curved design --- */
+.hero-content {
+  position: relative;
+  z-index: 5;
+}
+
+.hero-actions {
+  position: relative;
+  z-index: 20;
+  margin-bottom: 48px;
+}
+
+.hero-actions .btn {
+  position: relative;
+  z-index: 21;
+}
+
+.hero::after {
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .hero-actions {
+    margin-bottom: 56px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-actions {
+    margin-bottom: 64px;
+  }
+}
+
+
+/* =========================================================
+   VACATION DREAMZ BRAND REFRESH
+   Black + Gold + White + Tropical Aqua
+   ========================================================= */
+:root {
+  --navy: #161616;
+  --teal: #18b8b2;
+  --aqua: #e8fbfa;
+  --sand: #faf7ef;
+  --coral: #f4b942;
+  --gold: #f4b942;
+  --gold-deep: #d99a16;
+  --black: #111111;
+  --ink: #1f1f1f;
+  --white: #ffffff;
+  --muted: #6f6f6f;
+}
+
+body {
+  background: #ffffff;
+  color: var(--ink);
+}
+
+.site-header {
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid rgba(17,17,17,.08);
+}
+
+.nav-links a:hover {
+  color: var(--gold-deep);
+}
+
+.nav-cta {
+  background: var(--black);
+  color: #fff !important;
+  border: 2px solid var(--black);
+}
+
+.nav-cta:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--black) !important;
+}
+
+.hero {
+  background:
+    linear-gradient(115deg, rgba(0,0,0,.74), rgba(0,0,0,.18)),
+    radial-gradient(circle at 86% 22%, rgba(244,185,66,.75) 0 11%, transparent 12%),
+    linear-gradient(150deg,#063c43 0%,#17a9a3 42%,#f1d796 72%,#ffffff 100%);
+}
+
+.eyebrow {
+  color: var(--gold-deep);
+}
+
+.eyebrow.light {
+  color: #ffe199;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--black);
+  border: 2px solid var(--gold);
+}
+
+.btn-primary:hover {
+  background: #ffd36b;
+}
+
+.btn-secondary {
+  border: 2px solid rgba(255,255,255,.8);
+  color: #fff;
+  background: rgba(0,0,0,.15);
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: var(--black);
+}
+
+.btn-dark {
+  background: var(--black);
+  color: #fff;
+  border: 2px solid var(--black);
+}
+
+.btn-dark:hover {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+}
+
+.btn-outline {
+  border: 2px solid var(--black);
+  color: var(--black);
+  background: #fff;
+}
+
+.btn-outline:hover {
+  background: var(--black);
+  color: #fff;
+}
+
+.services {
+  background: var(--sand);
+}
+
+.service-card {
+  border: 1px solid rgba(17,17,17,.06);
+}
+
+.why {
+  background: var(--aqua);
+}
+
+.why-grid strong,
+.text-link,
+.social-links {
+  color: var(--gold-deep);
+}
+
+.agent-panel {
+  background: linear-gradient(135deg,#111111,#20393c);
+  border: 1px solid rgba(244,185,66,.28);
+}
+
+.agent-badges div {
+  border-color: rgba(244,185,66,.25);
+}
+
+.btn-light {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.contact {
+  background: linear-gradient(180deg,#fff,#faf7ef);
+}
+
+footer {
+  background: #101010;
+}
+
+.brand-logo {
+  height: 64px;
+}
+
+/* Hero curve/button fix */
+.hero-content {
+  position: relative;
+  z-index: 6;
+}
+
+.hero-actions {
+  position: relative;
+  z-index: 20;
+  margin-bottom: 58px;
+}
+
+.hero-actions .btn {
+  position: relative;
+  z-index: 21;
+}
+
+.hero::after {
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Refreshed gallery */
+.travel-gallery {
+  background: #ffffff;
+}
+
+.travel-gallery .section-heading p:last-child {
+  color: var(--muted);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-rows: 280px 280px;
+  gap: 18px;
+}
+
+.gallery-grid figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #eee;
+  box-shadow: 0 16px 38px rgba(17,17,17,.08);
+}
+
+.gallery-grid .gallery-feature {
+  grid-row: 1 / 3;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-grid figcaption {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  color: var(--black);
+  font-weight: 800;
+  background: rgba(244,185,66,.94);
+  padding: 9px 13px;
+  border-radius: 999px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.12);
+}
+
+.gallery-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.about-photo {
+  border: 8px solid #fff;
+  outline: 1px solid rgba(17,17,17,.06);
+  box-shadow: 0 18px 45px rgba(17,17,17,.12);
+}
+
+/* Form accents */
+.form-page {
+  background: linear-gradient(180deg,#fffaf0 0%,#ffffff 38%,#eefcfc 100%);
+}
+
+.form-section-heading > span {
+  background: #fff1c4;
+  color: #8a5b00;
+}
+
+.intake-form input:focus,
+.intake-form select:focus,
+.intake-form textarea:focus {
+  outline: 3px solid rgba(244,185,66,.18);
+  border-color: var(--gold-deep);
+}
+
+.check-grid input {
+  accent-color: var(--gold-deep);
+}
+
+.submit-panel {
+  background: linear-gradient(135deg,#111111,#20393c);
+  border: 1px solid rgba(244,185,66,.24);
+}
+
+/* Dedicated gallery page */
+.gallery-page {
+  background: #fff;
+}
+
+.gallery-page-hero {
+  text-align: center;
+  padding: 80px 7vw 42px;
+  background: linear-gradient(180deg,#fff9e8,#fff);
+}
+
+.gallery-page-hero h1 {
+  color: var(--black);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-page-hero p:last-child {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.vacation-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 7vw 95px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 24px;
+}
+
+.vacation-card {
+  background: #fff;
+  border: 1px solid rgba(17,17,17,.08);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 15px 38px rgba(17,17,17,.07);
+}
+
+.vacation-card img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  display: block;
+}
+
+.vacation-card-body {
+  padding: 24px;
+}
+
+.vacation-card-body h2 {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+
+.vacation-card-body p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.add-more-card {
+  border: 2px dashed rgba(17,17,17,.18);
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 35px;
+  background: #fafafa;
+}
+
+.add-more-card div {
+  max-width: 430px;
+}
+
+.add-more-card span {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.add-more-card h2 {
+  margin-bottom: 10px;
+}
+
+.gallery-footer-cta {
+  text-align: center;
+  padding: 0 7vw 90px;
+}
+
+@media (max-width:900px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 350px 260px 260px;
+  }
+  .gallery-grid .gallery-feature {
+    grid-row: 1 / 2;
+  }
+  .vacation-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-actions {
+    margin-bottom: 66px;
+  }
+}
+
+@media (max-width:620px) {
+  .brand-logo {
+    height: 52px;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+  .gallery-grid figure,
+  .gallery-grid .gallery-feature {
+    grid-row: auto;
+    height: 280px;
+  }
+  .gallery-grid .gallery-feature {
+    height: 420px;
+  }
+  .hero-actions {
+    margin-bottom: 72px;
+  }
+}
