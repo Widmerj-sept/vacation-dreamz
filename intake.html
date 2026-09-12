@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Inquiry | Vacation Dreamz</title>
+  <meta name="description" content="Start planning your next vacation with Vacation Dreamz." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Vacation Dreamz home">
+      <img src="vacation-dreamz-logo.svg" alt="Vacation Dreamz" class="brand-logo">
+    </a>
+    <a class="nav-cta" href="index.html">Back to Website</a>
+  </header>
+
+  <main class="form-page">
+    <section class="form-hero">
+      <p class="eyebrow">TRAVEL INQUIRY</p>
+      <h1>Tell me about your dream vacation.</h1>
+      <p>The more details you share, the better I can match you with vacation options that fit your style, priorities and budget.</p>
+    </section>
+
+    <section class="intake-wrap">
+      <form id="travelForm" class="intake-form">
+        <div class="form-section">
+          <div class="form-section-heading"><span>01</span><div><h2>About You</h2><p>How can I reach you?</p></div></div>
+          <div class="form-grid two">
+            <label>Full Name *<input type="text" name="Full Name" required></label>
+            <label>Email Address *<input type="email" name="Email" required></label>
+            <label>Phone Number *<input type="tel" name="Phone" required></label>
+            <label>Best Way to Contact You
+              <select name="Preferred Contact">
+                <option>Text</option><option>Email</option><option>Phone Call</option>
+                <option>Facebook Messenger</option><option>Instagram DM</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-heading"><span>02</span><div><h2>Trip Basics</h2><p>Where, when and who is going?</p></div></div>
+          <div class="form-grid two">
+            <label>Destination(s) You’re Considering *<input type="text" name="Destination" placeholder="Cancun, Punta Cana, Caribbean cruise..." required></label>
+            <label>Departure City / Airport *<input type="text" name="Departure City" placeholder="Buffalo, NY / BUF" required></label>
+            <label>Preferred Departure Date *<input type="date" name="Departure Date" required></label>
+            <label>Preferred Return Date *<input type="date" name="Return Date" required></label>
+            <label>Are Your Dates Flexible?
+              <select name="Date Flexibility">
+                <option>No, dates are firm</option><option>Yes, by 1–2 days</option>
+                <option>Yes, by 3–5 days</option><option>Very flexible</option>
+              </select>
+            </label>
+            <label>Occasion
+              <select name="Occasion">
+                <option>Vacation / Getaway</option><option>Honeymoon / Anniversary</option>
+                <option>Birthday</option><option>Destination Wedding</option>
+                <option>Bachelorette / Bachelor Trip</option><option>Family Celebration</option><option>Other</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-heading"><span>03</span><div><h2>Travelers</h2><p>Who will be traveling?</p></div></div>
+          <div class="form-grid two">
+            <label>Number of Adults *<input type="number" name="Adults" min="1" value="2" required></label>
+            <label>Number of Children<input type="number" name="Children" min="0" value="0"></label>
+          </div>
+          <label>Children’s Ages at Time of Travel<input type="text" name="Children Ages" placeholder="Example: 4, 8, 12"></label>
+          <label>Anything I Should Know About Your Group?
+            <textarea name="Group Details" rows="4" placeholder="Accessibility needs, multiple rooms, celebrating something special, etc."></textarea>
+          </label>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-heading"><span>04</span><div><h2>Your Vacation Style</h2><p>What kind of trip are you dreaming about?</p></div></div>
+          <fieldset>
+            <legend>Trip Type — choose all that apply</legend>
+            <div class="check-grid">
+              <label><input type="checkbox" name="Trip Type" value="All-Inclusive Resort"> All-Inclusive Resort</label>
+              <label><input type="checkbox" name="Trip Type" value="Cruise"> Cruise</label>
+              <label><input type="checkbox" name="Trip Type" value="Family Vacation"> Family Vacation</label>
+              <label><input type="checkbox" name="Trip Type" value="Couples Getaway"> Couples Getaway</label>
+              <label><input type="checkbox" name="Trip Type" value="Group Trip"> Group Trip</label>
+              <label><input type="checkbox" name="Trip Type" value="Destination Wedding"> Destination Wedding</label>
+              <label><input type="checkbox" name="Trip Type" value="Beach Vacation"> Beach Vacation</label>
+              <label><input type="checkbox" name="Trip Type" value="Not Sure Yet"> Not Sure Yet</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>What matters most?</legend>
+            <div class="check-grid">
+              <label><input type="checkbox" name="Priorities" value="Beautiful Beach"> Beautiful Beach</label>
+              <label><input type="checkbox" name="Priorities" value="Great Pools"> Great Pools</label>
+              <label><input type="checkbox" name="Priorities" value="Good Food"> Good Food</label>
+              <label><input type="checkbox" name="Priorities" value="Nightlife / Entertainment"> Nightlife / Entertainment</label>
+              <label><input type="checkbox" name="Priorities" value="Kid-Friendly"> Kid-Friendly</label>
+              <label><input type="checkbox" name="Priorities" value="Adults-Only"> Adults-Only</label>
+              <label><input type="checkbox" name="Priorities" value="Luxury"> Luxury</label>
+              <label><input type="checkbox" name="Priorities" value="Best Value"> Best Value</label>
+            </div>
+          </fieldset>
+
+          <label>Describe Your Ideal Vacation
+            <textarea name="Ideal Vacation" rows="5" placeholder="Relaxing, adventurous, lively, quiet, upscale, lots for the kids to do..."></textarea>
+          </label>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-heading"><span>05</span><div><h2>Budget & Travel Details</h2><p>This helps me recommend realistic options.</p></div></div>
+          <div class="form-grid two">
+            <label>Approximate Total Trip Budget *
+              <select name="Budget" required>
+                <option value="">Choose a range</option>
+                <option>Under $2,500</option><option>$2,500–$4,000</option><option>$4,000–$6,000</option>
+                <option>$6,000–$8,000</option><option>$8,000–$10,000</option><option>$10,000+</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+            <label>Does This Budget Include Airfare?
+              <select name="Budget Includes Air">
+                <option>Yes</option><option>No</option><option>Not sure</option>
+              </select>
+            </label>
+            <label>Do You Need Flights?
+              <select name="Flights">
+                <option>Yes</option><option>No</option><option>Maybe</option>
+              </select>
+            </label>
+            <label>Do You Need Travel Protection?
+              <select name="Travel Protection">
+                <option>Please include information</option><option>Yes</option><option>No</option><option>Not sure</option>
+              </select>
+            </label>
+          </div>
+          <label>Preferred Hotel / Resort / Cruise Line (if any)
+            <input type="text" name="Preferred Brand" placeholder="Example: Excellence, Finest, Royal Caribbean...">
+          </label>
+          <label>Anything You Definitely Do NOT Want?
+            <textarea name="Avoid" rows="3" placeholder="Long transfers, party resort, huge property, connecting flights, etc."></textarea>
+          </label>
+        </div>
+
+        <div class="form-section">
+          <div class="form-section-heading"><span>06</span><div><h2>Final Details</h2><p>Anything else that will help me plan?</p></div></div>
+          <label>Have You Worked With a Travel Agent Before?
+            <select name="Past Agent">
+              <option>No</option><option>Yes</option>
+            </select>
+          </label>
+          <label>How Did You Hear About Vacation Dreamz?
+            <select name="Referral Source">
+              <option>Facebook</option><option>Instagram</option><option>TikTok</option>
+              <option>Friend / Family Referral</option><option>Repeat Client</option><option>Other</option>
+            </select>
+          </label>
+          <label>Additional Notes
+            <textarea name="Additional Notes" rows="5" placeholder="Tell me anything else you want me to know."></textarea>
+          </label>
+          <label class="consent">
+            <input type="checkbox" required>
+            <span>I understand this inquiry does not confirm a booking and that pricing and availability can change until a reservation is secured.</span>
+          </label>
+        </div>
+
+        <div class="submit-panel">
+          <h2>Ready to send your request?</h2>
+          <p>Click below and your email app will open with all of your answers pre-filled for Jane.</p>
+          <button type="submit" class="btn btn-primary">Send My Vacation Inquiry</button>
+          <small>Your information is not stored on this website.</small>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>Vacation Dreamz</strong><p>Jane | Travel Agent & Vacation Planner</p></div>
+    <p>Widmerj@outlook.com • 716-785-4583</p>
+  </footer>
+
+<script>
+document.getElementById('travelForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = new FormData(this);
+  const grouped = {};
+  for (const [key, value] of form.entries()) {
+    if (!grouped[key]) grouped[key] = [];
+    grouped[key].push(value);
+  }
+  let body = "VACATION DREAMZ - NEW TRAVEL INQUIRY\\n\\n";
+  Object.entries(grouped).forEach(([key, values]) => {
+    body += key + ": " + values.join(", ") + "\\n";
+  });
+  body += "\\nSubmitted through the Vacation Dreamz website.";
+  const subject = "New Vacation Inquiry - " + (grouped["Full Name"] ? grouped["Full Name"][0] : "Website Client");
+  window.location.href = "mailto:Widmerj@outlook.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
